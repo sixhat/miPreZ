@@ -88,7 +88,8 @@ nav a {
     transition: opacity 100ms ease-in-out;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
     opacity: 1;
 }
