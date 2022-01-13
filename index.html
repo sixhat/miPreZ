@@ -69,6 +69,12 @@
         .next {
             font-size: 70%;
             text-align: right;
+            opacity: 0.1;
+            transition: 150ms opacity ease-in-out;
+        }
+        
+        .next:hover {
+            opacity: 1;
         }
         
         nav {
@@ -79,11 +85,6 @@
             padding: 0 max(7vw, 5vh);
             justify-content: end;
             width: 100%;
-            opacity: 0.1;
-        }
-        
-        nav:hover {
-            opacity: 1;
         }
         
         nav a:before {
@@ -91,11 +92,14 @@
         }
         
         nav a {
+            opacity: 0.1;
             text-decoration: none;
+            transition: opacity 100ms ease-in-out;
         }
         
         nav a:hover {
             text-decoration: underline;
+            opacity: 1;
         }
         
         @media print {
