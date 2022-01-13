@@ -11,3 +11,9 @@ The simplicity of it allows me to just git clone the repo directly into my serve
 ## Are there any Themes?
 
 Right now there are two themes __dark__ and __light__. Just change the class in the body tag.
+
+## Can I write Slide notes?
+
+Yes, just use the class notes in a span at the bottom of the slide. 
+
+The notes class isn't rendered, except in print if you set the handout class in body tag
