@@ -94,9 +94,29 @@ nav a:focus {
     opacity: 1;
 }
 
+.notes {
+    display: none;
+}
+
 @media print {
     .slide {
         page-break-before: always;
         break-after: always;
+    }
+    .light {
+        background: white;
+        color: black;
+    }
+    .handout .slide {
+        column-count: 2;
+        flex-wrap: wrap;
+    }
+    .handout .slide * {
+        max-width: 45vw;
+    }
+    .handout .slide .notes {
+        -webkit-column-break-before: always;
+        display: block;
+        margin-left: 2vw;
     }
 }
