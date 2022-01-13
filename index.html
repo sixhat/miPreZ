@@ -9,7 +9,8 @@
     <style>
         html {
             scroll-behavior: smooth;
-            font-size: 24px;
+            font-size: calc(100vh / 40);
+            font-family: sans-serif;
         }
         
         * {
@@ -21,7 +22,20 @@
         .presentation {
             display: flex;
             flex-direction: column;
-            scroll-snap-type: y mandatory;
+        }
+        
+        .light {
+            background: white;
+            color: #222;
+        }
+        
+        a {
+            color: sandybrown;
+        }
+        
+        .dark {
+            background: #222;
+            color: #EEE;
         }
         
         .slide {
@@ -29,21 +43,27 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            background-color: beige;
-            padding: 4vh;
-            scroll-snap-align: start;
-            scroll-snap-stop: always;
+            justify-content: space-between;
+            padding: 10vw 7vw;
+        }
+        
+        code {
+            font-family: sans-serif;
+            height: 100%;
+            margin-top: 1rem;
+            white-space: pre-line;
         }
     </style>
-
 </head>
 
-<body class='presentation'>
+<body class='presentation dark'>
     <div class='slide' id='s1'>
-        <h1>This is 1 slide</h1>
+        <h1>What is miPereZ?</h1>
         <code>
-                This is my contents
+            <h2>miPreZ</h2>
+
+            miPreZ is a minimal HTML slides framework to make slides easy to edit inline and online.
+                
         </code>
         <p>
             <a href="#s1">prev</a>
@@ -52,11 +72,11 @@
     </div>
 
     <div class='slide' id='s2'>
-        <h1>This is 2 slide</h1>
+        <h1>How to use?</h1>
         <code>
-            Another example of content
-            
-            And now?
+       Just copy the HTML code of this presentation and edit away.
+
+       The simplicity of it allows me to just git clone the repo directly into my server and then just edit away.
         </code>
         <p>
             <a href="#s1">prev</a>
@@ -66,13 +86,13 @@
 
 
     <div class='slide' id='s3'>
-        <h1>Slide n. 3</h1>
+        <h1>Are there any Themes?</h1>
         <code>
-                Oh Crap. hEr wu mg
+            Right now there are two themes <b>dark</b> and <b>light</b>. Just change the class in the body tag.
         </code>
         <p>
-            <a href="#s1">prev</a>
-            <a href="#s2">next</a>
+            <a href="#s2">prev</a>
+            <a href="#s3">next</a>
         </p>
     </div>
 </body>
