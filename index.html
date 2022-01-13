@@ -5,19 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miSlides Example</title>
-    <link rel="stylesheet" href="style.css">
+    <title>miPreZ Example</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-size: 24px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .presentation {
+            display: flex;
+            flex-direction: column;
+            scroll-snap-type: y mandatory;
+        }
+        
+        .slide {
+            width: 99vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: beige;
+            padding: 4vh;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+    </style>
+
 </head>
 
 <body class='presentation'>
     <div class='slide' id='s1'>
         <h1>This is 1 slide</h1>
-        <a href="#s2">next</a>
+        <code>
+                This is my contents
+        </code>
+        <p>
+            <a href="#s1">prev</a>
+            <a href="#s2">next</a>
+        </p>
     </div>
 
     <div class='slide' id='s2'>
         <h1>This is 2 slide</h1>
-        <a href="#s1">back</a>
+        <code>
+            Another example of content
+            
+            And now?
+        </code>
+        <p>
+            <a href="#s1">prev</a>
+            <a href="#s3">next</a>
+        </p>
+    </div>
+
+
+    <div class='slide' id='s3'>
+        <h1>Slide n. 3</h1>
+        <code>
+                Oh Crap. hEr wu mg
+        </code>
+        <p>
+            <a href="#s1">prev</a>
+            <a href="#s2">next</a>
+        </p>
     </div>
 </body>
 
