@@ -19,6 +19,10 @@
             box-sizing: border-box;
         }
         
+        body {
+            counter-reset: slide;
+        }
+        
         .presentation {
             display: flex;
             flex-direction: column;
@@ -43,19 +47,74 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
             padding: max(7vw, 5vh);
         }
         
-        code {
+        div.slide h1:before {
+            counter-increment: slide;
+            content: counter(slide) '';
+            font-size: 30%;
+            position: relative;
+            top: -1rem;
+            left: -1rem;
+        }
+        
+        .slide code {
             font-family: sans-serif;
             margin-top: 1rem;
             white-space: pre-line;
+        }
+        
+        .next {
+            font-size: 70%;
+            text-align: right;
+        }
+        
+        nav {
+            position: fixed;
+            display: flex;
+            bottom: 1rem;
+            font-size: 80%;
+            padding: 0 max(7vw, 5vh);
+            justify-content: end;
+            width: 100%;
+            opacity: 0.1;
+        }
+        
+        nav:hover {
+            opacity: 1;
+        }
+        
+        nav a:before {
+            content: ' ';
+        }
+        
+        nav a {
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            .slide {
+                page-break-before: always;
+                break-after: always;
+            }
         }
     </style>
 </head>
 
 <body class='presentation dark'>
+    <nav>
+        <a href="#s1">1</a>
+        <a href="#s2">2</a>
+        <a href="#s3">3</a>
+        <a href="#s4">4</a>
+    </nav>
+
     <div class='slide' id='s1'>
         <h1>What is miPereZ?</h1>
         <code>
@@ -64,11 +123,11 @@
             miPreZ is a minimal HTML slides framework to make slides easy to edit inline and online.
                 
         </code>
-        <p>
-            <a href="#s1">prev</a>
+        <p class='next'>
             <a href="#s2">next</a>
         </p>
     </div>
+
 
     <div class='slide' id='s2'>
         <h1>How to use?</h1>
@@ -77,8 +136,7 @@
 
        The simplicity of it allows me to just git clone the repo directly into my server and then just edit away.       
         </code>
-        <p>
-            <a href="#s1">prev</a>
+        <p class='next'>
             <a href="#s3">next</a>
         </p>
     </div>
@@ -89,8 +147,7 @@
         <code>
             Right now there are two themes <b>dark</b> and <b>light</b>. Just change the class in the body tag.
         </code>
-        <p>
-            <a href="#s2">prev</a>
+        <p class='next'>
             <a href="#s4">next</a>
         </p>
     </div>
@@ -99,11 +156,10 @@
         <h1>Using Images</h1>
         <code>
     <center>
-        <img src="https://picsum.photos/800/600" alt="">
+        <img src="https://picsum.photos/800/500" alt="">
     </center>
             </code>
-        <p>
-            <a href="#s3">prev</a>
+        <p class='next'>
             <a href="#s4">next</a>
         </p>
     </div>
