@@ -10,7 +10,7 @@ The simplicity of it allows me to just git clone the repo directly into my serve
 
 ## Are there any Themes?
 
-Right now there are two themes __dark__ and __light__. Just change the class in the body tag.
+Right now there are thre themes __light__ (default), __dark__ and __grad__. Just change the class in the body tag.
 
 ## Can I write Slide notes?
 
