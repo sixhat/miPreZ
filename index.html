@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Sousa-Rodrigues">
     <title>miPreZ Example</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <!-- 
+
     You can use the classes light/dark and handout 
     without the handout class the notes classes is never render
     if you set the body as handout, then the notes classes will be rendered 
@@ -17,15 +19,9 @@
     always print in landscape mode.
 -->
 
-<body class='presentation light'>
-    <nav>
-        <a href="#s1">1</a>
-        <a href="#s2">2</a>
-        <a href="#s3">3</a>
-        <a href="#s4">4</a>
-    </nav>
+<body class='presentation grad'>
 
-    <div class='slide' id='s1'>
+    <div class='slide title'>
         <h1>What is miPereZ?</h1>
         <code>
             <h2>miPreZ</h2>
@@ -33,45 +29,34 @@
             miPreZ is a minimal HTML slides framework to make slides easy to edit inline and online.
                 
         </code>
-        <p class='next'>
-            <a href="#s2">next</a>
-        </p>
     </div>
 
 
-    <div class='slide' id='s2'>
+    <div class='slide'>
         <h1>How to use?</h1>
         <code>
        Just copy the HTML code of this presentation and edit away.
 
        The simplicity of it allows me to just git clone the repo directly into my server and then just edit away.       
         </code>
-        <p class='next'>
-            <a href="#s3">next</a>
-        </p>
+
     </div>
 
 
-    <div class='slide' id='s3'>
+    <div class='slide'>
         <h1>Are there any Themes?</h1>
         <code>
             Right now there are two themes <b>dark</b> and <b>light</b>. Just change the class in the body tag.
         </code>
-        <p class='next'>
-            <a href="#s4">next</a>
-        </p>
     </div>
 
-    <div class='slide' id='s4'>
+    <div class='slide'>
         <h1>Using Images</h1>
         <code>
     <center>
         <img src="https://picsum.photos/800/500" alt="">
     </center>
             </code>
-        <p class='next'>
-            <a href="#s4">next</a>
-        </p>
         <span class='notes'>
             This don't show.
 
@@ -85,5 +70,6 @@
     </div>
 
 </body>
+<script src="assets/app.js"></script>
 
 </html>
