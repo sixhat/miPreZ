@@ -1,5 +1,6 @@
 const slides = document.getElementsByClassName('slide')
 let nav
+
 function myMouseClicked() {
     let url = window.location.href
     const urls = url.split('#s')
@@ -24,13 +25,6 @@ if (slides.length > 0) {
 
 for (let i = 0; i < slides.length; i++) {
     slides[i].id = 's' + i
-    // const p = document.createElement("P")
-    // p.classList.add('next')
-    // const a = document.createElement("A")
-    // a.setAttribute('href', '#s' + (i + 1) % slides.length)
-    // a.innerHTML = 'next'
-    // p.appendChild(a)
-    // // slides[i].appendChild(p)
     const aa = document.createElement("A")
     aa.setAttribute('href', '#s' + i)
     aa.innerHTML = i + 1
@@ -38,3 +32,10 @@ for (let i = 0; i < slides.length; i++) {
 }
 document.body.appendChild(nav)
 document.body.addEventListener('click', myMouseClicked)
+
+
+var md = window.markdownit();
+var mds = document.getElementsByClassName('md');
+for (let m of mds) {
+    m.innerHTML = md.render(m.innerText)
+}
