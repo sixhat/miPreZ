@@ -14,6 +14,6 @@ Right now there are thre themes __light__ (default), __dark__ and __grad__. Just
 
 ## Can I write Slide notes?
 
-Yes, just use the class notes in a span at the bottom of the slide. 
+Yes, just use the class notes in a span at the bottom of the slide.
 
 The notes class isn't rendered, except in print if you set the handout class in body tag
